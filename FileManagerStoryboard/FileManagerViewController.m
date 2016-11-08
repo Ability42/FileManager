@@ -148,7 +148,13 @@
         
         cell.nameLabel.text = fileName;
         cell.sizeLable.text = [self fileSizeFromValue:[attributes fileSize]];
-        cell.dateLabel.text = [NSString stringWithFormat:@"%@", [attributes fileModificationDate]];
+        
+        static NSDateFormatter *dateFormatter = nil;
+        if (!dateFormatter) {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm a"];
+        }
+        cell.dateLabel.text = [dateFormatter stringFromDate:[attributes fileModificationDate]];
         return cell;
     }
   

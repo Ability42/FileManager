@@ -15,7 +15,7 @@
 		788E585D1DCF6447006940DB /* FileManagerStoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E585C1DCF6447006940DB /* FileManagerStoryboardTests.m */; };
 		788E58681DCF6447006940DB /* FileManagerStoryboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E58671DCF6447006940DB /* FileManagerStoryboardUITests.m */; };
 		788E58771DCF6711006940DB /* FileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E58751DCF6711006940DB /* FileManagerViewController.m */; };
-		78F9C9F91DCFF08600A5483F /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F9C9F81DCFF08600A5483F /* SPTableViewCell.m */; };
+		78DCD8291DD2069A00DDE861 /* SPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DCD8281DD2069A00DDE861 /* SPTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		788E58691DCF6447006940DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		788E58751DCF6711006940DB /* FileManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManagerViewController.m; sourceTree = "<group>"; };
 		788E58761DCF6711006940DB /* FileManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManagerViewController.h; sourceTree = "<group>"; };
-		78F9C9F71DCFF08600A5483F /* SPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPTableViewCell.h; path = ../SPTableViewCell.h; sourceTree = "<group>"; };
-		78F9C9F81DCFF08600A5483F /* SPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPTableViewCell.m; path = ../SPTableViewCell.m; sourceTree = "<group>"; };
+		78DCD8271DD2069A00DDE861 /* SPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTableViewCell.h; sourceTree = "<group>"; };
+		78DCD8281DD2069A00DDE861 /* SPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				788E58461DCF6447006940DB /* AppDelegate.m */,
 				788E58751DCF6711006940DB /* FileManagerViewController.m */,
 				788E58761DCF6711006940DB /* FileManagerViewController.h */,
-				78F9C9F71DCFF08600A5483F /* SPTableViewCell.h */,
-				78F9C9F81DCFF08600A5483F /* SPTableViewCell.m */,
+				78DCD8271DD2069A00DDE861 /* SPTableViewCell.h */,
+				78DCD8281DD2069A00DDE861 /* SPTableViewCell.m */,
 				788E584B1DCF6447006940DB /* Main.storyboard */,
 				788E584E1DCF6447006940DB /* Assets.xcassets */,
 				788E58501DCF6447006940DB /* LaunchScreen.storyboard */,
@@ -283,7 +283,7 @@
 			files = (
 				788E58771DCF6711006940DB /* FileManagerViewController.m in Sources */,
 				788E58471DCF6447006940DB /* AppDelegate.m in Sources */,
-				78F9C9F91DCFF08600A5483F /* SPTableViewCell.m in Sources */,
+				78DCD8291DD2069A00DDE861 /* SPTableViewCell.m in Sources */,
 				788E58441DCF6447006940DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

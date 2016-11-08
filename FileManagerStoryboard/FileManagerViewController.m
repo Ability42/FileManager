@@ -21,14 +21,14 @@
 
 #pragma mark - Init
 
-- (id) initWithFolderPath:(NSString *)path
-{
-    self = [super initWithStyle:UITableViewStyleGrouped];
-    if (self) {
-        self.path = path;
-    }
-    return self;
-}
+//- (id) initWithFolderPath:(NSString *)path
+//{
+//    self = [super initWithStyle:UITableViewStyleGrouped];
+//    if (self) {
+//        self.path = path;
+//    }
+//    return self;
+//}
 
 - (void) setPath:(NSString *)path
 {
@@ -59,7 +59,23 @@
     return isDirectory;
 }
 
-#pragma mark - View
+- (NSString*) fileSizeFromValue:(unsigned long long)size
+{
+    static NSString *units[] = {@"B", @"KB", @"MB", @"GB", @"TB"};
+    static int unitsCount = 5;
+    
+    int index = 0;
+    double fileSize = (double)size;
+    
+    while (fileSize > 1024 && index < unitsCount) {
+        fileSize /= 1024;
+        index++;
+    }
+    
+    return [NSString stringWithFormat:@"%.2f %@", fileSize, units[index]];
+}
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -131,8 +147,8 @@
         SPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:fileID];
         
         cell.nameLabel.text = fileName;
-        cell.sizeLable.text = [NSString stringWithFormat:@"%lld", [attributes fileSize]];
-        cell.dateLabel.text =[NSString stringWithFormat:@"%@", [attributes fileModificationDate]];
+        cell.sizeLable.text = [self fileSizeFromValue:[attributes fileSize]];
+        cell.dateLabel.text = [NSString stringWithFormat:@"%@", [attributes fileModificationDate]];
         return cell;
     }
   
